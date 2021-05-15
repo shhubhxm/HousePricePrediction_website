@@ -1,0 +1,185 @@
+{% load static %} 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>House Price Prediction</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href={% static  "images/icons/favicon.ico" %} />
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href={% static  "vendor/bootstrap/css/bootstrap.min.css" %}>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href={% static  "fonts/font-awesome-4.7.0/css/font-awesome.min.css" %}>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href={% static  "fonts/Linearicons-Free-v1.0.0/icon-font.min.css" %}>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href={% static  "vendor/animate/animate.css" %}>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href={% static  "vendor/css-hamburgers/hamburgers.min.css" %}>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href={% static  "vendor/animsition/css/animsition.min.css" %}>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href={% static  "vendor/select2/select2.min.css" %}>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href={% static  "vendor/daterangepicker/daterangepicker.css" %}>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href={% static  "css/util.css" %}>
+	<link rel="stylesheet" type="text/css" href={% static  "css/main.css" %}>
+<!--===============================================================================================-->
+</head>
+<body>
+
+
+	<div class="container-contact100">
+		<div class="wrap-contact100">
+			<form class="contact100-form validate-form" action="{% url 'result' %}">
+				<span class="contact100-form-title">
+					House Price Prediction
+				</span>
+
+				<!-- 1 -->
+				<div class="wrap-input100 validate-input" data-validate="This field is required">
+					<label class="label-input100" for="name">CRIM</label>
+					<input id="CRIM" class="input100" type="text" name="CRIM" placeholder="Per capita crime rate">
+					<span class="focus-input100"></span>
+				</div>
+
+				<!-- 2 -->
+				<div class="wrap-input100 validate-input" data-validate="This field is required">
+					<label class="label-input100" for="name">ZN</label>
+					<input id="ZN" class="input100" type="text" name="ZN" placeholder="Proportion of Residential Land zoned">
+					<span class="focus-input100"></span>
+				</div>
+				<!-- 3 -->
+				<div class="wrap-input100 validate-input" data-validate="This field is required">
+					<label class="label-input100" for="name">INDUS</label>
+					<input id="INDUS" class="input100" type="text" name="INDUS" placeholder="Proportion of non-retail business">
+					<span class="focus-input100"></span>
+				</div>
+				<!-- 4 -->
+				<div class="wrap-input100 validate-input" data-validate="This field is required">
+					<label class="label-input100" for="name">CHAS</label>
+					<input id="CHAS" class="input100" type="text" name="CHAS" placeholder="Charles River dummy variable">
+					<span class="focus-input100"></span>
+				</div>
+				<!-- 5 -->
+				<div class="wrap-input100 validate-input" data-validate="This field is required">
+					<label class="label-input100" for="name">NOX</label>
+					<input id="NOX" class="input100" type="text" name="NOX" placeholder="Nitric Oxides concentration">
+					<span class="focus-input100"></span>
+				</div>
+				<!-- 6 -->
+				<div class="wrap-input100 validate-input" data-validate="This field is required">
+					<label class="label-input100" for="name">RM</label>
+					<input id="RM" class="input100" type="text" name="RM" placeholder="Average number of rooms">
+					<span class="focus-input100"></span>
+				</div>
+				<!-- 7 -->
+				<div class="wrap-input100 validate-input" data-validate="This field is required">
+					<label class="label-input100" for="name">AGE</label>
+					<input id="AGE" class="input100" type="text" name="AGE" placeholder="Proportion of owner-occupied">
+					<span class="focus-input100"></span>
+				</div>
+				<!-- 8 -->
+				<div class="wrap-input100 validate-input" data-validate="This field is required">
+					<label class="label-input100" for="name">DIS</label>
+					<input id="DIS" class="input100" type="text" name="DIS" placeholder="Weighted distances to five Boston employment centres">
+					<span class="focus-input100"></span>
+				</div>
+				<!-- 9 -->
+				<div class="wrap-input100 validate-input" data-validate="This field is required">
+					<label class="label-input100" for="name">RAD</label>
+					<input id="RAD" class="input100" type="text" name="RAD" placeholder="Index of accessibility to radial highways">
+					<span class="focus-input100"></span>
+				</div>
+				<!-- 10 -->
+				<div class="wrap-input100 validate-input" data-validate="This field is required">
+					<label class="label-input100" for="name">TAX</label>
+					<input id="TAX" class="input100" type="text" name="TAX" placeholder="Full-value property-tax rate">
+					<span class="focus-input100"></span>
+				</div>
+				<!-- 11 -->
+				<div class="wrap-input100 validate-input" data-validate="This field is required">
+					<label class="label-input100" for="name">PTRATIO</label>
+					<input id="PTRATIO" class="input100" type="text" name="PTRATIO" placeholder="Pupil-teacher ratio by town">
+					<span class="focus-input100"></span>
+				</div>
+				<!-- 12 -->
+				<div class="wrap-input100 validate-input" data-validate="This field is required">
+					<label class="label-input100" for="name">B</label>
+					<input id="B" class="input100" type="text" name="B" placeholder="Proportion of blacks by town">
+					<span class="focus-input100"></span>
+				</div>
+				<!-- 13 -->				
+				<div class="wrap-input100 validate-input" data-validate="This field is required">
+					<label class="label-input100" for="name">LSTAT</label>
+					<input id="LSTAT" class="input100" type="text" name="LSTAT" placeholder="% lower status of the population">
+					<span class="focus-input100"></span>
+				</div>			
+				
+
+				<div class="container-contact100-form-btn">
+					<!-- <button input type="submit" value="Predict" class="contact100-form-btn">
+						Predict	
+					</button> -->
+					<input type="submit" value="Predict" class="contact100-form-btn">
+				</div>
+				
+			</form>
+
+			<div class="contact100-more flex-col-c-m" style="background-image: url({% static  'images/bg-01.jpg' %});">
+			</div>
+		</div>
+	</div>
+
+
+
+	
+
+<!--===============================================================================================-->
+	<script src={% static  "vendor/jquery/jquery-3.2.1.min.js" %}></script>
+<!--===============================================================================================-->
+	<script src={% static  "vendor/animsition/js/animsition.min.js" %}></script>
+<!--===============================================================================================-->
+	<script src={% static  "vendor/bootstrap/js/popper.js" %}></script>
+	<script src={% static  "vendor/bootstrap/js/bootstrap.min.js" %}></script>
+<!--===============================================================================================-->
+	<script src={% static  "vendor/select2/select2.min.js" %}></script>
+	<script>
+		$(".js-select2").each(function(){
+			$(this).select2({
+				minimumResultsForSearch: 20,
+				dropdownParent: $(this).next('.dropDownSelect2')
+			});
+		})
+		$(".js-select2").each(function(){
+			$(this).on('select2:open', function (e){
+				$(this).parent().next().addClass('eff-focus-selection');
+			});
+		});
+		$(".js-select2").each(function(){
+			$(this).on('select2:close', function (e){
+				$(this).parent().next().removeClass('eff-focus-selection');
+			});
+		});
+
+	</script>
+<!--===============================================================================================-->
+	<script src={% static  "vendor/daterangepicker/moment.min.js" %}></script>
+	<script src={% static  "vendor/daterangepicker/daterangepicker.js" %}></script>
+<!--===============================================================================================-->
+	<script src={% static  "vendor/countdowntime/countdowntime.js" %}></script>
+<!--===============================================================================================-->
+	<script src={% static  "js/main.js" %}></script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-23581568-13');
+	</script>
+</body>
+</html>

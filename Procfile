@@ -1,0 +1,1 @@
+web: gunicorn HousePrediction_website.wsgi
