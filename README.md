@@ -8,6 +8,6 @@ This takes 13 parameters which are from the UCI Boston dataset.
 <span style="display:block;text-align:center">![](images/home.png)</span>
 
 ## Results
-the predicted value od MEDV(Median value of owner-occupied homes in $1000's) is shown as below.
+the predicted value od MEDV(_Median value of owner-occupied homes in $1000's_) is shown as below.
 
 <span style="display:block;text-align:center">![](images/result.png)</span>
